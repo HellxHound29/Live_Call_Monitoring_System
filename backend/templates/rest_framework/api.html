@@ -1,0 +1,57 @@
+{% extends "rest_framework/base.html" %}
+
+{% block style %}
+{{ block.super }}
+<style>
+  body {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    font-family: 'Inter', sans-serif;
+  }
+  .navbar {
+    background-color: #1e293b !important;
+    border-bottom: 1px solid #334155;
+  }
+  .navbar-brand, .navbar-nav .nav-link {
+    color: #f8fafc !important;
+  }
+  .content-main {
+    background-color: #1e293b !important;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  pre {
+    background-color: #0f172a !important;
+    color: #7dd3fc !important;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 16px;
+  }
+  .btn-primary {
+    background-color: #1e3a5f !important;
+    border-color: #1e3a5f !important;
+  }
+  .btn-primary:hover {
+    background-color: #2d4f7c !important;
+  }
+  h1, h2, h3 {
+    color: #f8fafc !important;
+  }
+  .breadcrumb {
+    background-color: #0f172a !important;
+  }
+  .breadcrumb-item a {
+    color: #7dd3fc !important;
+  }
+  label {
+    color: #94a3b8 !important;
+  }
+  input, select, textarea {
+    background-color: #0f172a !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #334155 !important;
+  }
+</style>
+{% endblock %}

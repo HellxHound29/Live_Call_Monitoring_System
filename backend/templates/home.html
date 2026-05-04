@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Call Monitoring System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #0f172a;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background-color: #1e293b;
+      border-bottom: 1px solid #334155;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .nav-links { display: flex; gap: 12px; }
+    .nav-links a {
+      padding: 8px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .btn-outline {
+      border: 1px solid #334155;
+      color: #94a3b8;
+    }
+    .btn-outline:hover { background-color: #1e293b; color: #f8fafc; }
+    .btn-primary {
+      background-color: #1e3a5f;
+      color: #f8fafc;
+      border: 1px solid #1e3a5f;
+    }
+    .btn-primary:hover { background-color: #2d4f7c; }
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      color: #7dd3fc;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    .badge span { color: #22c55e; font-size: 8px; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: #f8fafc;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    h1 em { color: #7dd3fc; font-style: normal; }
+    .subtitle {
+      font-size: 16px;
+      color: #94a3b8;
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .cta-buttons a {
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .cta-primary {
+      background-color: #1e3a5f;
+      color: #f8fafc;
+      border: 1px solid #1e3a5f;
+    }
+    .cta-primary:hover { background-color: #2d4f7c; }
+    .cta-secondary {
+      background-color: transparent;
+      color: #94a3b8;
+      border: 1px solid #334155;
+    }
+    .cta-secondary:hover { background-color: #1e293b; color: #f8fafc; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      width: 100%;
+      margin: 60px auto 0;
+      padding: 0 20px;
+    }
+    .card {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 24px;
+      text-align: left;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: #7dd3fc; transform: translateY(-2px); }
+    .card-icon { font-size: 24px; margin-bottom: 12px; }
+    .card-title { font-size: 14px; font-weight: 600; color: #f8fafc; margin-bottom: 6px; }
+    .card-desc { font-size: 12px; color: #64748b; line-height: 1.5; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #475569;
+      font-size: 12px;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">Live Call Monitoring System</div>
+    <div class="nav-links">
+      <a href="/api/calls/" class="btn-outline">API</a>
+      <a href="/admin/" class="btn-outline">Admin</a>
+      <a href="http://localhost:5173" class="btn-primary">Open App →</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="badge"><span>●</span> SYSTEM ONLINE</div>
+    <h1>Live Call<br/><em>Monitoring</em><br/>System</h1>
+    <p class="subtitle">
+      Real-time call recording, CDR dashboard, live monitoring
+      and supervisor tools for your Asterisk PBX.
+    </p>
+    <div class="cta-buttons">
+      <a href="http://localhost:5173" class="cta-primary">Open Frontend App</a>
+      <a href="/admin/" class="cta-secondary">Django Admin</a>
+      <a href="/api/calls/" class="cta-secondary">Browse API</a>
+    </div>
+
+    <div class="cards">
+      <a href="http://localhost:5173/dashboard" class="card">
+        <div class="card-icon">📋</div>
+        <div class="card-title">CDR Dashboard</div>
+        <div class="card-desc">View, filter and export call detail records</div>
+      </a>
+      <a href="http://localhost:5173/live" class="card">
+        <div class="card-icon">📡</div>
+        <div class="card-title">Live Monitoring</div>
+        <div class="card-desc">Monitor active calls and use ChanSpy</div>
+      </a>
+      <a href="http://localhost:5173/users" class="card">
+        <div class="card-icon">👥</div>
+        <div class="card-title">User Management</div>
+        <div class="card-desc">Manage portal users and permissions</div>
+      </a>
+      <a href="http://localhost:5173/settings" class="card">
+        <div class="card-icon">⚙️</div>
+        <div class="card-title">Settings</div>
+        <div class="card-desc">Configure database and recording paths</div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Live Call Monitoring System · Backend running on Django + Channels
+  </footer>
+</body>
+</html>
